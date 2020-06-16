@@ -18,26 +18,80 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-background-iframe="background/main/index.html" data-background-interactive>
+			<section data-background-iframe="background/main/index.html" data-background-interactive
+				data-background-opacity="0.5">
 				<h1>Fabrice Alcindor</h1>
 				<h2>Senior Software Engineer</h2>
 				<p>Since 2004 in various industries</p>
 			</section>
-			<section data-background-image="image/signalProcessing/Matlab_Logo.png"
-				data-background-opacity="0.2" data-background-size="50%">
-				<h1> Signal Processing </h1>
+			<section>
+				<section data-background-image="image/education/large_esiee_axe_md_00d_web_6bcc9.jpg"
+					data-background-opacity="0.5">
+					<h1> Education</h1>
+				</section>
+				<section data-background-image="image/education/large_esiee_axe_md_00d_web_6bcc9.jpg"
+					data-background-opacity="0.5">
+					<h1> Esiee-Paris</h1>
+					<h2>2002-2005: Master of Science</h2>
+					<p>
+						Special skill: Signal Processing
+					</p>
+				</section>
+				<section data-background-image="image/education/large_esiee_axe_md_00d_web_6bcc9.jpg"
+					data-background-opacity="0.5">
+					<h1>ESTE</h1>
+					<h2> Bachelor (1999-2002)</h2>
+					<p>
+						Special skill: Electronics for Telecommunication
+					</p>
+				</section>
 			</section>
+			<section>
+				<section data-background-image="image/signalProcessing/Matlab_Logo.png" data-background-opacity="0.5"
+					data-background-size="50%">
+					<h1> Signal Processing</h1>
+				</section>
+				<section data-background-image="image/signalProcessing/Matlab_Logo.png" data-background-opacity="0.5"
+					data-background-size="50%">
+					<h1> University of Sherbrook </h1>
+					<h2> Laboratory Research (2004) </h2>
+					<ul>
+						<li>
+							Spacial diversity technics qualification(for Whale detection)
+						</li>
+						<li>
+							Design of a parametric method base on 3D gyroscopic data
+						</li>
+					</ul>
+					<ul>
+				</section>
+				<section data-background-image="image/signalProcessing/Matlab_Logo.png" data-background-opacity="0.5"
+					data-background-size="50%">
+					<h1> Esiee-Paris</h1>
+					<h2> Project samples</h2>
+					<ul>
+						<li>
+							Lossless Voice compression by word corpora (DSP)
+						</li>
+						<li>
+							Digital radiocommunication modelisation (Matlab)
+						</li>
+					</ul>
+				</section>
+
+			</section>
+
 			<section data-background-color="rgb(84,53,58)" data-background-image="image/gsm/2560px-GSMLogo.png"
-				data-background-opacity="0.2">
+				data-background-opacity="0.5">
 				<h1>Wireless Telephony</h1>
 			</section>
-			<section data-background-image="image/defense/underwater-warfare.jpg" data-background-opacity="0.2">
+			<section data-background-image="image/defense/underwater-warfare.jpg" data-background-opacity="0.5">
 				<h1>Defense</h1>
 			</section>
-			<section data-background-image="image/automotive/automotive.jpg" data-background-opacity="0.2">
+			<section data-background-image="image/automotive/automotive.jpg" data-background-opacity="0.5">
 				<h1>Automotive Infotainment</h1>
 			</section>
-			<section data-background-image="image/hospitality/negresco.jpg" data-background-opacity="0.2">
+			<section data-background-image="image/hospitality/negresco.jpg" data-background-opacity="0.5">
 				<h1>Hospitality Reservation</h1>
 			</section>
 		</div>
@@ -53,7 +107,8 @@
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
-
+			autoSlide: 5000,
+			loop: true,
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
