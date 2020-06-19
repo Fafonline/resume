@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 </head>
 
-<body>
+<body onload="myFunction()">
 	<div class="reveal">
 		<div class="slides">
 			<section data-background-iframe="background/main/index.html" data-background-interactive
@@ -142,8 +142,7 @@
 					</div>
 				</section>
 			</section>
-			<section data-background-image="image/defense/underwater-warfare.jpg" data-background-opacity="0.5">
-				<h1>Defense</h1>
+			<section id="defense">
 			</section>
 			<section data-background-image="image/automotive/automotive.jpg" data-background-opacity="0.5">
 				<h1>Automotive Infotainment</h1>
@@ -153,7 +152,7 @@
 			</section>
 		</div>
 	</div>
-
+	<script src="section.js"></script>
 	<script src="dist/reveal.js"></script>
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
