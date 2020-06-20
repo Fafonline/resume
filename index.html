@@ -15,7 +15,14 @@
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 </head>
 
-<body onload="myFunction()">
+<body onload="renderSection()">
+	<template id="section_tmpl">
+		<section id="sectionHeader">
+			<h1 id="compagny"></h1>
+			<h2 id="positionAndDate"></h2>
+			<ul id="experienceList"></ul>
+		</section>
+	</template>
 	<div class="reveal">
 		<div class="slides">
 			<section data-background-iframe="background/main/index.html" data-background-interactive
@@ -51,7 +58,7 @@
 					data-background-size="50%">
 					<h1> Signal Processing</h1>
 				</section>
-				<section data-background-image="image/signalProcessing/_DSC7094-min.jpg" data-background-opacity="0.5">
+				<section data-background-image="image/signalProcessing/_DSC7094-min.jpg" data-background-opacity="0.2">
 					<h1> University of Sherbrook </h1>
 					<h2> Laboratory Research (2004) </h2>
 					<ul>
@@ -65,7 +72,7 @@
 					<ul>
 				</section>
 				<section data-background-image="image/signalProcessing/Lena-Soderberg-image-test.jpg"
-					data-background-opacity="0.1">
+					data-background-opacity="0.2">
 					<h1> Esiee-Paris</h1>
 					<h2> Project samples</h2>
 					<ul>
@@ -143,6 +150,43 @@
 				</section>
 			</section>
 			<section id="defense">
+				<section data-background-image="image/defense/underwater-warfare.jpg">
+					<h1>Defense</h1>
+				</section>
+				<section data-background-image="image/defense/underwater-warfare.jpg" data-background-opacity="0.2">
+					<h1> Thales </h1>
+					<h2> Signal Processing (2009-2013)</h2>
+					<div>
+						<ul>
+							<li class="fragment fade-in-then-semi-out-shrinked">
+								C++ development of signal processing algorithms (beamforming)
+							</li>
+							<li class="fragment fade-in-then-semi-out-shrinked">
+								Java development of graphical Man-Machine Interfaces"
+							</li>
+							<li class="fragment fade-in-then-semi-out-shrinked">
+								Software integration: configuration management, build generation and test
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section data-background-image="image/defense/radar.jpg" data-background-opacity="0.2">
+					<h1> Ineo Defense </h1>
+					<h2> Ground Radar test bench (2018)</h2>
+					<div>
+						<ul>
+							<li class="fragment fade-in-then-semi-out-shrinked">
+								Evaluation of Linux Realtime performance and system tuning
+							</li>
+							<li class="fragment fade-in-then-semi-out-shrinked">
+								Software architecture
+							</li>
+							<li class="fragment fade-in-then-semi-out-shrinked">
+								Toolchain definition and implementation (Yocto)
+							</li>
+						</ul>
+					</div>
+				</section>
 			</section>
 			<section data-background-image="image/automotive/automotive.jpg" data-background-opacity="0.5">
 				<h1>Automotive Infotainment</h1>
@@ -164,7 +208,7 @@
 		Reveal.initialize({
 			hash: true,
 			autoSlide: 5000,
-			loop: true,
+			//loop: true,
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
