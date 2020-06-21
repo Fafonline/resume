@@ -50,9 +50,9 @@ function renderSection() {
             //     templateExperienceList.appendChild(experienceInList);
             // });
 
-            var section = document.getElementById("defense");
+            // var section = document.getElementById("defense");
             //section.appendChild(templateClone);
-            section.appendChild(sectionCreated);
+            // section.appendChild(sectionCreated);
         });
     }
 }
