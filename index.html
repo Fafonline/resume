@@ -288,7 +288,7 @@
 				// Not all dependencies shown...
 				{ src: 'lib/js/data-markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
 				// presentable.js must come after data-markdown.js
-				{ src: 'path/to/presentable.js', callback: function () { presentable.toc({ framework: "revealjs" }); } }
+				{ src: 'presentable/dist/presentable.js', callback: function () { presentable.toc({ framework: "revealjs" }); } }
 			]
 		});
 	</script>
