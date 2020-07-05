@@ -10,9 +10,9 @@
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	<link rel="stylesheet" href="./presentable/dist/presentable.min.css">
 </head>
 
 <body onload="renderSection()">
@@ -25,11 +25,17 @@
 	</template>
 	<div class="reveal">
 		<div class="slides">
-			<section data-background-iframe="background/main/index.html" data-background-interactive
-				data-background-opacity="0.5">
-				<h1>Fabrice Alcindor</h1>
-				<h2>Senior Software Engineer</h2>
-				<p>Since 2004 in various industries</p>
+			<section>
+				<section data-background-iframe="background/main/index.html" data-background-interactive
+					data-background-opacity="0.5">
+					<h1>Fabrice Alcindor</h1>
+					<h2>Senior Software Engineer</h2>
+					<p>Since 2004 in various industries</p>
+				</section>
+				<section>
+					<h2>Table of Contents</h2>
+					<nav id="presentable-toc" class="revealjs"></nav>
+				</section>
 			</section>
 			<section>
 				<section data-background-image="image/education/large_esiee_axe_md_00d_web_6bcc9.jpg"
@@ -231,38 +237,43 @@
 					</ul>
 				</section>
 			</section>
-			<section data-background-image="image/hospitality/negresco.jpg" data-background-opacity="0.5">
-				<h1>Hospitality Reservation</h1>
-			</section>
-			<section data-background-image="image/hospitality/negresco.jpg" data-background-opacity="0.2">
-				<h1>
-					Amadeus
-				</h1>
-				<h2>
-					Back-end software
-				</h2>
-				<ul>
-					<li class="fragment fade-in-then-semi-out-shrinked">
-						Design and implementation of back-ends for Hospitality Central Reservation System.
-					</li>
-					<li class="fragment fade-in-then-semi-out-shrinked">
-						Management of the components on Openshit platform.
-					</li>
-					<li class="fragment fade-in-then-semi-out-shrinked">
-						As Scrum master (PSM1 Certified): Facilitation and animation Scrum events.
-					</li>
-				</ul>
-			</section>
-			<section data-background-iframe="background/skills/ineo.html" data-background-interactive>
-
+			<section>
+				<section data-background-image="image/hospitality/negresco.jpg" data-background-opacity="0.5">
+					<h1>Hospitality Reservation</h1>
+				</section>
+				<section data-background-image="image/hospitality/negresco.jpg" data-background-opacity="0.2">
+					<h1>
+						Amadeus
+					</h1>
+					<h2>
+						Back-end software
+					</h2>
+					<ul>
+						<li class="fragment fade-in-then-semi-out-shrinked">
+							Design and implementation of back-ends for Hospitality Central Reservation System.
+						</li>
+						<li class="fragment fade-in-then-semi-out-shrinked">
+							Management of the components on Openshit platform.
+						</li>
+						<li class="fragment fade-in-then-semi-out-shrinked">
+							As Scrum master (PSM1 Certified): Facilitation and animation Scrum events.
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
+		<aside id="presentable-icon" class="revealjs">
+			<a title="Table of Contents" href="#/0/1">
+				<img alt="Table of Contents" src="./presentable/dist/icons/revealjs.png" />
+			</a>
+		</aside>
 	</div>
 	<script src="section.js"></script>
 	<script src="dist/reveal.js"></script>
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
+	<script src="./presentable/dist/presentable.min.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -272,7 +283,13 @@
 			autoSlide: 5000,
 			//loop: true,
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			dependencies: [
+				// Not all dependencies shown...
+				{ src: 'lib/js/data-markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				// presentable.js must come after data-markdown.js
+				{ src: 'path/to/presentable.js', callback: function () { presentable.toc({ framework: "revealjs" }); } }
+			]
 		});
 	</script>
 </body>
