@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	<link rel="stylesheet" href="./presentable/dist/presentable.min.css">
 </head>
 
 <body onload="renderSection()">
@@ -31,10 +30,6 @@
 					<h1>Fabrice Alcindor</h1>
 					<h2>Senior Software Engineer</h2>
 					<p>Since 2004 in various industries</p>
-				</section>
-				<section>
-					<h2>Table of Contents</h2>
-					<nav id="presentable-toc" class="revealjs"></nav>
 				</section>
 			</section>
 			<section>
@@ -268,7 +263,6 @@
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
-	<script src="./presentable/dist/presentable.min.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -281,10 +275,7 @@
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
 			dependencies: [
 				// Not all dependencies shown...
-				{ src: 'lib/js/data-markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-				// presentable.js must come after data-markdown.js
-				{ src: 'presentable/dist/presentable.js', callback: function () { presentable.toc({ framework: "revealjs" }); } }
-			]
+				{ src: 'lib/js/data-markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } }]
 		});
 	</script>
 </body>
